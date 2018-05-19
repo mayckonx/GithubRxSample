@@ -44,6 +44,7 @@ class GithubService {
         let url = URL(string: "https://api.github.com/search/repositories?q=language:\(encodedLanguage)&sort=stars")!
         return session.rx
             .json(url: url)
+            .debug()
             .flatMap { json throws -> Observable<[Repository]> in
                 guard
                     let json = json as? [String: Any],

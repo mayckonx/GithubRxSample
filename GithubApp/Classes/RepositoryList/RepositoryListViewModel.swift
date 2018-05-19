@@ -74,7 +74,7 @@ class RepositoryListViewModel {
         
         let _inputChooseLanguage = PublishSubject<Void>()
         self.inputChooseLanguage = _inputChooseLanguage.asObserver()
-        self.outputShowLanguageList = _inputChooseLanguage.asObservable()        
+        self.outputShowLanguageList = _inputChooseLanguage.asObservable()
 
     }
 }

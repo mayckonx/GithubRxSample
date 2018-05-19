@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EF93DF5620B04655009691F6 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93DF5520B04655009691F6 /* GithubService.swift */; };
+		EF93DF5920B061DA009691F6 /* LanguageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93DF5820B061DA009691F6 /* LanguageListViewController.swift */; };
+		EF93DF5B20B066BA009691F6 /* LanguageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93DF5A20B066BA009691F6 /* LanguageListViewModel.swift */; };
 		EFE4EB7420B03A22007C9BF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4EB7320B03A22007C9BF5 /* AppDelegate.swift */; };
 		EFE4EB7620B03A22007C9BF5 /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4EB7520B03A22007C9BF5 /* RepositoryListViewController.swift */; };
 		EFE4EB7920B03A22007C9BF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE4EB7720B03A22007C9BF5 /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 		26E1C89AE5E1BDF7F62FBBC4 /* Pods-GithubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubApp/Pods-GithubApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8E5A8D2E36F932C62CEF3588 /* Pods_GithubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF93DF5520B04655009691F6 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		EF93DF5820B061DA009691F6 /* LanguageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListViewController.swift; sourceTree = "<group>"; };
+		EF93DF5A20B066BA009691F6 /* LanguageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListViewModel.swift; sourceTree = "<group>"; };
 		EFE4EB7020B03A22007C9BF5 /* GithubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE4EB7320B03A22007C9BF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFE4EB7520B03A22007C9BF5 /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 				18D118E078E9FC9F5AD747F1 /* Pods-GithubApp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF93DF5720B061AE009691F6 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				EF93DF5820B061DA009691F6 /* LanguageListViewController.swift */,
+				EF93DF5A20B066BA009691F6 /* LanguageListViewModel.swift */,
+			);
+			path = Languages;
 			sourceTree = "<group>";
 		};
 		EFE4EB6720B03A22007C9BF5 = {
@@ -135,6 +148,7 @@
 		EFE4EB8920B03AC2007C9BF5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EF93DF5720B061AE009691F6 /* Languages */,
 				EFE4EB8A20B03AC7007C9BF5 /* RepositoryList */,
 			);
 			path = Classes;
@@ -284,7 +298,9 @@
 				EFE4EB9220B0421E007C9BF5 /* RepositoryListViewModel.swift in Sources */,
 				EFE4EB8E20B03E40007C9BF5 /* RepositoryViewModel.swift in Sources */,
 				EFE4EB8C20B03C43007C9BF5 /* RepositoryCell.swift in Sources */,
+				EF93DF5B20B066BA009691F6 /* LanguageListViewModel.swift in Sources */,
 				EF93DF5620B04655009691F6 /* GithubService.swift in Sources */,
+				EF93DF5920B061DA009691F6 /* LanguageListViewController.swift in Sources */,
 				EFE4EB9020B03E90007C9BF5 /* Repository.swift in Sources */,
 				EFE4EB7620B03A22007C9BF5 /* RepositoryListViewController.swift in Sources */,
 				EFE4EB7420B03A22007C9BF5 /* AppDelegate.swift in Sources */,
