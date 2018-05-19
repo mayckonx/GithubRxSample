@@ -13,7 +13,7 @@
         <!--Repository List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RepositoryListViewController" customModule="GithubApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RepositoryListViewController" id="BYZ-38-t0r" customClass="RepositoryListViewController" customModule="GithubApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +126,7 @@
         <!--Language List View Controller-->
         <scene sceneID="uXg-0C-fkY">
             <objects>
-                <viewController id="hAU-X9-7Iv" customClass="LanguageListViewController" customModule="GithubApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LanguageListViewController" id="hAU-X9-7Iv" customClass="LanguageListViewController" customModule="GithubApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lkg-nY-4eO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import SafariServices
 
-class RepositoryListViewController: UIViewController {
+class RepositoryListViewController: UIViewController, StoryboardInitializable {
 
     private enum SegueType: String {
         case languageList = "Show Language List"
@@ -24,7 +24,7 @@ class RepositoryListViewController: UIViewController {
                                                        action: nil)
     private let refreshControl = UIRefreshControl()
     
-    private let viewModel = RepositoryListViewModel(initialLanguage: "Swift")
+    var viewModel = RepositoryListViewModel(initialLanguage: "Swift")
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -61,14 +61,7 @@ class RepositoryListViewController: UIViewController {
         .bind(to: navigationItem.rx.title)
         .disposed(by: disposeBag)
         
-        viewModel.outputShowRepository
-            .subscribe(onNext:{ [weak self] in self?.openRepository(by: $0) })
-            .disposed(by: disposeBag)
-        
-        viewModel.outputShowLanguageList
-            .subscribe(onNext: { [weak self] in self?.openLanguageList() })
-            .disposed(by: disposeBag)
-        
+
         viewModel.outputAlertMessage
             .subscribe(onNext: { [weak self] in self?.presentAlert(message: $0) })
             .disposed(by: disposeBag)
@@ -99,51 +92,6 @@ class RepositoryListViewController: UIViewController {
         let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alertController, animated: true)
-    }
-    
-    // MARK: - Navigation
-    
-    private func openRepository(by url: URL) {
-        let safariViewController = SFSafariViewController(url: url)
-        navigationController?.pushViewController(safariViewController, animated: true)
-    }
-    
-    private func openLanguageList() {
-        performSegue(withIdentifier: SegueType.languageList.rawValue, sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var destinationVC: UIViewController? = segue.destination
-        
-        if let nvc = destinationVC as? UINavigationController {
-            destinationVC = nvc.viewControllers.first
-        }
-        
-        if let viewController = destinationVC as? LanguageListViewController, segue.identifier == SegueType.languageList.rawValue {
-            prepareLanguageListViewController(viewController)
-        }
-    }
-    
-    /// Setups 'LanguageListViewController' before navigation.
-    ///
-    /// - Parameter viewController: 'LanguageListViewController' to prepare
-    private func prepareLanguageListViewController(_ viewController: LanguageListViewController) {
-        let languageListViewModel = LanguageListViewModel()
-        
-        let dismiss = Observable.merge([
-            languageListViewModel.outputDidCancel,
-            languageListViewModel.outputDidSelectLanguage.map { _ in }
-            ])
-        
-        dismiss
-            .subscribe(onNext: { [weak self] in self?.dismiss(animated: true) })
-            .disposed(by: disposeBag)
-        
-        languageListViewModel.outputDidSelectLanguage
-        .bind(to: viewModel.inputSetCurrentLanguage)
-        .disposed(by: disposeBag)
-        
-        viewController.viewModel = languageListViewModel
     }
 }
 

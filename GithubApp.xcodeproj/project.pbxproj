@@ -10,6 +10,11 @@
 		EF93DF5620B04655009691F6 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93DF5520B04655009691F6 /* GithubService.swift */; };
 		EF93DF5920B061DA009691F6 /* LanguageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93DF5820B061DA009691F6 /* LanguageListViewController.swift */; };
 		EF93DF5B20B066BA009691F6 /* LanguageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93DF5A20B066BA009691F6 /* LanguageListViewModel.swift */; };
+		EF93DF5D20B0A367009691F6 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93DF5C20B0A367009691F6 /* BaseCoordinator.swift */; };
+		EF93DF6020B0A8DC009691F6 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93DF5F20B0A8DC009691F6 /* StoryboardInitializable.swift */; };
+		EF93DF6220B0A9AF009691F6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93DF6120B0A9AF009691F6 /* AppCoordinator.swift */; };
+		EF93DF6420B0AA84009691F6 /* RepositoryListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93DF6320B0AA84009691F6 /* RepositoryListCoordinator.swift */; };
+		EF93DF6620B0ADBC009691F6 /* LanguageListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93DF6520B0ADBC009691F6 /* LanguageListCoordinator.swift */; };
 		EFE4EB7420B03A22007C9BF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4EB7320B03A22007C9BF5 /* AppDelegate.swift */; };
 		EFE4EB7620B03A22007C9BF5 /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4EB7520B03A22007C9BF5 /* RepositoryListViewController.swift */; };
 		EFE4EB7920B03A22007C9BF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE4EB7720B03A22007C9BF5 /* Main.storyboard */; };
@@ -29,6 +34,11 @@
 		EF93DF5520B04655009691F6 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		EF93DF5820B061DA009691F6 /* LanguageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListViewController.swift; sourceTree = "<group>"; };
 		EF93DF5A20B066BA009691F6 /* LanguageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListViewModel.swift; sourceTree = "<group>"; };
+		EF93DF5C20B0A367009691F6 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		EF93DF5F20B0A8DC009691F6 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
+		EF93DF6120B0A9AF009691F6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EF93DF6320B0AA84009691F6 /* RepositoryListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListCoordinator.swift; sourceTree = "<group>"; };
+		EF93DF6520B0ADBC009691F6 /* LanguageListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListCoordinator.swift; sourceTree = "<group>"; };
 		EFE4EB7020B03A22007C9BF5 /* GithubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE4EB7320B03A22007C9BF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFE4EB7520B03A22007C9BF5 /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
@@ -76,8 +86,18 @@
 			children = (
 				EF93DF5820B061DA009691F6 /* LanguageListViewController.swift */,
 				EF93DF5A20B066BA009691F6 /* LanguageListViewModel.swift */,
+				EF93DF6520B0ADBC009691F6 /* LanguageListCoordinator.swift */,
 			);
 			path = Languages;
+			sourceTree = "<group>";
+		};
+		EF93DF5E20B0A373009691F6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				EF93DF5C20B0A367009691F6 /* BaseCoordinator.swift */,
+				EF93DF5F20B0A8DC009691F6 /* StoryboardInitializable.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		EFE4EB6720B03A22007C9BF5 = {
@@ -101,6 +121,7 @@
 		EFE4EB7220B03A22007C9BF5 /* GithubApp */ = {
 			isa = PBXGroup;
 			children = (
+				EF93DF5E20B0A373009691F6 /* Library */,
 				EFE4EB8920B03AC2007C9BF5 /* Classes */,
 				EFE4EB8720B03AAA007C9BF5 /* App */,
 				EFE4EB8620B03AA5007C9BF5 /* Networking */,
@@ -130,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				EFE4EB7320B03A22007C9BF5 /* AppDelegate.swift */,
+				EF93DF6120B0A9AF009691F6 /* AppCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -161,6 +183,7 @@
 				EFE4EB8B20B03C43007C9BF5 /* RepositoryCell.swift */,
 				EFE4EB8D20B03E40007C9BF5 /* RepositoryViewModel.swift */,
 				EFE4EB9120B0421E007C9BF5 /* RepositoryListViewModel.swift */,
+				EF93DF6320B0AA84009691F6 /* RepositoryListCoordinator.swift */,
 			);
 			path = RepositoryList;
 			sourceTree = "<group>";
@@ -295,14 +318,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF93DF6220B0A9AF009691F6 /* AppCoordinator.swift in Sources */,
 				EFE4EB9220B0421E007C9BF5 /* RepositoryListViewModel.swift in Sources */,
 				EFE4EB8E20B03E40007C9BF5 /* RepositoryViewModel.swift in Sources */,
+				EF93DF5D20B0A367009691F6 /* BaseCoordinator.swift in Sources */,
+				EF93DF6420B0AA84009691F6 /* RepositoryListCoordinator.swift in Sources */,
 				EFE4EB8C20B03C43007C9BF5 /* RepositoryCell.swift in Sources */,
+				EF93DF6020B0A8DC009691F6 /* StoryboardInitializable.swift in Sources */,
 				EF93DF5B20B066BA009691F6 /* LanguageListViewModel.swift in Sources */,
 				EF93DF5620B04655009691F6 /* GithubService.swift in Sources */,
 				EF93DF5920B061DA009691F6 /* LanguageListViewController.swift in Sources */,
 				EFE4EB9020B03E90007C9BF5 /* Repository.swift in Sources */,
 				EFE4EB7620B03A22007C9BF5 /* RepositoryListViewController.swift in Sources */,
+				EF93DF6620B0ADBC009691F6 /* LanguageListCoordinator.swift in Sources */,
 				EFE4EB7420B03A22007C9BF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

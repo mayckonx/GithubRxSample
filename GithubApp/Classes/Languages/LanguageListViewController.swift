@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class LanguageListViewController: UIViewController {
+class LanguageListViewController: UIViewController, StoryboardInitializable {
 
     let disposeBag = DisposeBag()
     var viewModel: LanguageListViewModel!
